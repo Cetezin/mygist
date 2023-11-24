@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Official Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Montserrat&family=Mr+Dafoe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fixed">
+        <nav>
+            <div class="brand"><h2>John Kunamon</h2></div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Biography</a></li>
+                    <li><a href="">Goals</a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <button>=</button>
+        </div>
+        <button class="close">x</button>
+        <div class="nav-2">
+            <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Biography</a></li>
+                <li><a href="">Goals</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="images">
+            <img src="assets/images/john.jpg" alt="" sizes="" srcset="">
+            <div class="desc">
+                <center>
+                    <p>John Kunamon</p>
+                    <p>Software Engineer</p>
+                    <p id="school_id">ASL/01052022-0406</p>
+                </center>
+            </div>
+        </div>
+        <div class="card">
+            <div class="blog">
+                <div class="title">
+                    <p>About Me</p>
+                </div>
+                <div class="content">
+                    <p> I am a passionate and dedicated Software Engineer with 4 years of Proffesional experience. 
+                        Skilled in developing innovative Software solutions, my aim is to create impactful applications
+                        that solve real-world problems. I enjoy collaborating with cross-functional teams, as well as 
+                        working independently to tackle complex challenges. With deep understanding of programming 
+                        languages, frameworks, and best practices, I continuously strive to stay up-to-date with the latest
+                        advancement in technology.
+                    </p>
+                    <br>
+                    <p>My technical skills include the following:</p>
+                    <br>
+                    <p>JavaScript</p>
+                    <br>
+                    <p>Python programming Language</p>
+                    <br>
+                    <p>Git version control</p>
+                    </div>
+            </div>
+            <br>
+            <hr>
+            <div class="blog">
+                <div class="title">
+                    <p>Biography</p>
+                </div>
+                <div class="content">
+                    <p>It has been a very interesting journey so far. 
+                        And I am enjoying every bit of it.
+                        My School ID is: ASL/01052022-0406</p>                
+                </div>
+            </div>
+        </div class="card">
+
+    </div>
+</body>
+
+<script>
+    let jumbotron = document.querySelector('.jumbotron')
+    let links = document.querySelector(".nav-2")
+    let close = document.querySelector(".close")
+
+    jumbotron.addEventListener("click", () => {
+        links.style.display = "inline"
+        jumbotron.style.display = "none"
+        close.style.display = "block"
+    })
+
+    close.addEventListener("click", () => {
+        links.style.display = "none"
+        jumbotron.style.display = "block"
+        close.style.display = "none"
+    })
+
+</script>
+</html>

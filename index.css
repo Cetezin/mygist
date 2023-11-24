@@ -1,0 +1,166 @@
+
+.fixed{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 7vw;
+    right: 7vw;
+    background-color: #ffffff;
+}
+
+.jumbotron{
+    margin-bottom: 10px;
+}
+
+.container{
+    margin: 20vh 80px;
+    /* font-family: 'EB Garamond', serif; */
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Mr Dafoe', cursive; */
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links{
+    justify-content: space-evenly
+}
+
+nav ul{
+    display: inline-flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 30px;
+}
+
+li a:hover{
+    color: #e3d90a;
+}
+
+ul li a{
+    color: rgb(200, 201, 194);
+    text-decoration: none;
+}
+
+nav .brand{
+    color: rgb(173, 190, 13);
+    /* letter-spacing: 0.3rem; */
+    font-size: 1.5rem;
+}
+
+.nav-2{
+    display: none;
+}
+
+.nav-2 ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding: 0 15px 0 15px;
+}
+
+.close, .jumbotron{
+    display: none;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img{
+    padding: 10px;
+    width: 25vw;
+    height: auto;
+    border-radius: 60%;
+}
+
+#school_id{
+    color: rgba(32, 168, 168, 0.932);
+    font-size: 1.2rem;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.desc h2,h3,p{
+    margin: 3px 3vw;
+}
+
+.content{
+    max-width: 800px;
+}
+
+.card p{
+    /* line-height: 1rem; */
+    margin: 0 0;
+}
+
+.blog{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 50px;
+}
+
+.title{
+    display: flex;
+    font-size: 2em;
+    color: rgb(173, 190, 13);
+}
+
+@media(max-width: 1000px){
+
+    .container{
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .blog{
+        display: block;
+    }
+
+    .title{
+        margin-bottom: 20px;
+    }
+
+    nav .brand, .links ul{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media(max-width: 500px){
+
+    *{
+        font-size: 0.9rem;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .jumbotron{
+        display: block;
+        width: 50px;
+    }
+
+    .jumbotron ul{
+        list-style-type: none;
+    }
+
+    .jumbotron ul li{
+        padding: 3px 15px;
+        margin-top: 2px;
+        background-color: #d7bdd8;
+    }
+
+}
