@@ -1,22 +1,22 @@
 
+*{
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Mr Dafoe', cursive; */
+    margin: 0;
+}
+
+
 .fixed{
     position: fixed;
     right: 0;
     top: 0;
-    left: 7vw;
-    right: 7vw;
-    background-color: #ffffff;
-}
-
-.jumbotron{
-    margin-bottom: 10px;
+    left: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 .container{
     margin: 20vh 80px;
-    /* font-family: 'EB Garamond', serif; */
-    font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Mr Dafoe', cursive; */
+
 }
 
 nav{
@@ -24,6 +24,20 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-inline-start: 7vw;
+    margin-inline-end: 7vw;
+    margin-block-end: 1.5rem;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand>img{
+    width: 35%;
+    margin-inline-end: 5px;
 }
 
 .links{
@@ -37,17 +51,21 @@ nav ul{
     font-size: 30px;
 }
 
+ul{
+    list-style-type: square;
+}
+
 li a:hover{
     color: #e3d90a;
 }
 
-ul li a{
+ul>li>a{
     color: rgb(200, 201, 194);
     text-decoration: none;
 }
 
 nav .brand{
-    color: rgb(173, 190, 13);
+    color: rgb(12, 112, 116);
     /* letter-spacing: 0.3rem; */
     font-size: 1.5rem;
 }
@@ -58,14 +76,17 @@ nav .brand{
 
 .nav-2 ul{
     list-style-type: none;
+    margin-block-end: 5px;
 }
 
 ul li{
-    padding: 0 15px 0 15px;
+    padding: 4px 15px 0 15px;
 }
 
 .close, .jumbotron{
     display: none;
+    margin-block-end: 10px;
+    margin-inline-start: 7vw;
 }
 
 .images{
@@ -102,6 +123,9 @@ ul li{
 .card p{
     /* line-height: 1rem; */
     margin: 0 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
 }
 
 .blog{
@@ -113,7 +137,30 @@ ul li{
 .title{
     display: flex;
     font-size: 2em;
+    transition: width 5s;
     color: rgb(173, 190, 13);
+}
+
+.graphics{
+    margin-block-start: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.graphics img{
+    width: 200px;
+    height: auto;
+    margin-block-start: 20px;
+}
+
+.card>.carousel{
+    display: none;
+}
+
+.footer{
+    padding: 20px;
+    background-color: #111111;
+    color: white;
 }
 
 @media(max-width: 1000px){
@@ -161,6 +208,51 @@ ul li{
         padding: 3px 15px;
         margin-top: 2px;
         background-color: #d7bdd8;
+    }
+
+    .graphics{
+        display: none;
+    }
+
+    .card .carousel{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        /* height: fit-content; */
+        margin-block-start:100px ;
+    }
+    
+    .carousel>.img{
+        padding: 1%;
+        /* background-color: #111111; */
+        box-shadow: #d7bdd8 1px 1px 1px 1px;
+    }
+    
+    
+    .increment, .decrement{
+        width: 6%;
+    }
+
+    .click{
+        margin-block-start: 20px;
+        margin-inline-start: 20px;
+        width: 7px;
+        height: 7px;
+        border-top: #111111 solid 4px;
+        border-right: #111111 solid 4px;
+        rotate: 45deg;
+    }
+
+    .unclick{
+        margin-block-start: 20px;
+        margin-inline-start: 20px;
+        width: 7px;
+        height: 7px;
+        border-top: #111111 solid 4px;
+        border-right: #111111 solid 4px;
+        rotate: 135deg;
+        display: none;
     }
 
 }

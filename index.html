@@ -11,13 +11,16 @@
 <body>
     <div class="fixed">
         <nav>
-            <div class="brand"><h2>John Kunamon</h2></div>
+            <div class="brand">
+                <img src="assets/images/genteel-01.png" alt="">
+                <div><h2>myGist</h2></div>
+            </div>
             <div class="links">
                 <ul>
                     <li><a href="#">About me</a></li>
                     <li><a href="#">Biography</a></li>
-                    <li><a href="">Goals</a></li>
-                    <li><a href="">Projects</a></li>
+                    <li><a href="#">Goals</a></li>
+                    <li><a href="#">Projects</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,27 +64,103 @@
                     <br>
                     <p>My technical skills include the following:</p>
                     <br>
-                    <p>JavaScript</p>
-                    <br>
-                    <p>Python programming Language</p>
-                    <br>
-                    <p>Git version control</p>
-                    </div>
+                    <ul>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python programmingLanguage</a></li>
+                        <li><a href="#">Git version control</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
             </div>
             <br>
-            <hr>
             <div class="blog">
                 <div class="title">
                     <p>Biography</p>
                 </div>
                 <div class="content">
-                    <p>It has been a very interesting journey so far. 
-                        And I am enjoying every bit of it.
-                        My School ID is: ASL/01052022-0406</p>                
+                    <p>John Kunamon, a proficient Software Engineer and Data Analyst, was born and raised in the vibrant 
+                        city of Port harcourt, Nigeria. After completing his Secondary education, I pursued a higher 
+                        education at the University of Port Harcourt, where I studied Mechanical Engineering for 5 years.
+                        Following my graduation, I worked for some companies, where I practiced my skills as a Mechanical
+                        Engineer.
+                    </p>
+                    <br>
+                    <p>However, I have always been fascinated by the world of tech, and how I could apply it within my field.
+                        To this end I variously engaged in self learning Projects, where I learned fundamental programming 
+                        techniques. In 2020, I enrolled with the Rivers State ICT Department, where i Studied Data Analytics.
+                        I was retained at the Rivers State ICT Department, where I worked for 3 years as a data analyst.
+                        I also freelance as a Data analyst with Upwork.
+                    </p>
+                    <br>
+                    <p>In August 2023, I enrolled with Altschool Africa, where I am currently honing my skills as a software engineer.
+                        The journey so far has been an interesting one, as I have made tremendious improvements.
+                    </p>
                 </div>
+                <br>
+            </div>
+            <div class="blog">
+                <div class="title">
+                    <p>Goals</p>
+                </div>
+                <div class="content">
+                    <p>At the end of my program with Altschool africa, I intend to acheive the following:</p>
+                    <ul>
+                        <li>
+                            <p>Develop a software application from scratch. A software that would be
+                                useful to my community, and would be well known.
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <p>I would make meaningful contribution to open-source projects. This would include
+                                fixing bugs, adding new features, or improvining the documentation of an existing prject.
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <p>As a Backend Engineer, my goal is to integrate various APIs into a project. I plan
+                                to integrate APIs from social media platforms, payment gateways, or other third party services
+                                to my project.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="title">
+                    <p>Projects</p>
+                </div>
+                <div class="content">
+                    <p>Meanwhile the following are some of my lovely Projects, designed from scratch, using Adobe Illustrator.
+                    </p>
+                    
+                    <div class="graphics">
+                        <img src="assets/images/citation-01.png" alt="citation-01">
+                        <img src="assets/images/Dome.png" alt="dome">
+                        <img src="assets/images/Foil.png" alt="">
+                        <img src="assets/images/indomitables-01.png" alt="">
+                        <img src="assets/images/lilly foods-01.png" alt="">
+                        <img src="assets/images/Solidarity.jpg" alt="">
+                        <img src="assets/images/Vision.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel">
+                <img class="decrement" onclick="{decrement()}" src="assets/images/backward-01.png" alt="">
+                <div class="img">
+                    <img src="assets/images/Foil.png" alt="" width="150px" height="100px">
+                </div>
+                <img class="increment" onclick="{increment()}" src="assets/images/forward-01.png" alt="">
             </div>
         </div class="card">
 
+    </div>
+    <div class="footer">
+        <center>
+            <p>John Kunamon. &copy Copyright 2023. All rights reserved.</p>
+        </center>
     </div>
 </body>
 
@@ -89,6 +168,46 @@
     let jumbotron = document.querySelector('.jumbotron')
     let links = document.querySelector(".nav-2")
     let close = document.querySelector(".close")
+    let item = document.querySelector(".img")
+    let inc = document.querySelector(".increment")
+    let dec = document.querySelector(".decrement")
+    
+    let images = [
+        '<img src="assets/images/Foil.png" alt="" width="150px" height= "100px">',
+        '<img src="assets/images/citation-01.png" alt="citation-01" width="150px" height= "100px">',
+        '<img src="assets/images/Dome.png" alt="dome" width="150px" height= "100px">',
+        '<img src="assets/images/indomitables-01.png" alt="" width="150px" height= "100px">',
+        '<img src="assets/images/lilly foods-01.png" alt="" width="150px" height= "100px">',
+        '<img src="assets/images/Solidarity.jpg" alt="" width="150px" height= "100px">',
+        '<img src="assets/images/Vision.png" alt="" width="150px" height= "100px">'
+    ]
+
+    let image = 1
+
+    function increment(){
+        image++;
+        let displayImages = images[image]
+        item.innerHTML =  displayImages
+        if(image == images.length - 1){
+            inc.style.visibility = "hidden"
+            // inc.removeEventListener("click", increment)
+        }
+        if(item.innerHTML != images[0]){
+            dec.style.visibility = "visible"
+        }
+    }
+
+    function decrement(){
+        image--;
+        let displayImages = images[image]
+        item.innerHTML = displayImages
+        if(image < images.length - 1){
+            inc.style.visibility = "visible"
+        }
+        if(image == 0){
+            dec.style.visibility = "hidden"
+        }
+    }
 
     jumbotron.addEventListener("click", () => {
         links.style.display = "inline"
@@ -101,6 +220,7 @@
         jumbotron.style.display = "block"
         close.style.display = "none"
     })
+
 
 </script>
 </html>
